@@ -1,0 +1,65 @@
+.addUser {
+  width: 100%;
+  height: 100dvh;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+  border: solid 1px #e6e6e6;
+  border-radius: 4px;
+  padding: 8px;
+
+  .options {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+
+    button {
+      width: 32px;
+      height: 32px;
+      background-color: #fafafa;
+      border-radius: 4px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      cursor: pointer;
+      transition: 200ms;
+      border: solid 1px #e6e6e6;
+
+      &:hover {
+        background-color: #f2f2f2;
+      }
+
+      svg {
+        width: 75%;
+        height: auto;
+        fill: #6bcafa;
+      }
+    }
+
+    button.danger {
+      svg {
+        fill: #ff8080;
+      }
+    }
+  }
+
+  .formWrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    button.save {
+      margin-left: auto;
+    }
+  }
+}

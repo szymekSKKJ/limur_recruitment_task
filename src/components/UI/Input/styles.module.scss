@@ -1,0 +1,63 @@
+.input {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  .labelWrapper {
+    width: fit-content;
+    height: fit-content;
+    overflow: hidden;
+
+    label {
+      width: fit-content;
+      height: fit-content;
+      display: block;
+      transform: translate(-100%, 0px);
+      transition: 200ms;
+      font-size: 12px;
+    }
+  }
+
+  &:has(input:focus) .labelWrapper label {
+    transform: translate(0%, 0px);
+  }
+
+  &:not(:has(input:placeholder-shown)) .labelWrapper label {
+    transform: translate(0%, 0px);
+  }
+
+  input {
+    width: 100%;
+    height: auto;
+    background-color: #fafafa;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 200ms;
+    border: solid 1px #e6e6e6;
+    padding: 4px 12px 4px 12px;
+    outline: solid 2px transparent;
+    cursor: pointer;
+    font-size: 14px;
+
+    &:focus {
+      outline: solid 2px #6bcafa;
+    }
+  }
+}
+
+.input.error {
+  .labelWrapper {
+    label {
+      color: #ff8080;
+    }
+  }
+}
+
+.input.disabled {
+  input {
+    filter: brightness(0.85);
+    cursor: not-allowed;
+  }
+}
