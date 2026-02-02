@@ -6,8 +6,8 @@ import styles from "./styles.module.scss";
 import { Input } from "@/components/UI/Input/Input";
 import { useForm } from "@/hooks/useForm";
 import { Button } from "@/components/UI/Button/Button";
-import { User, useUsersZustand } from "../Users";
 import { useRouter } from "next/navigation";
+import { useUsersZustand } from "../Users";
 
 const svg = () => {
   return (
